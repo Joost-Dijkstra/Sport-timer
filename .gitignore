@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archives
+*.zip
+
+# Temp
+*.tmp
+*.temp
