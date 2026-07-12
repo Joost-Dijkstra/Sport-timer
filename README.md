@@ -2,57 +2,49 @@
 
 ![Sporttimer Cool Logo](./logo-sporttimer-cool.svg)
 
-A futuristic interval timer web app with a smartwatch-inspired interface, rich feedback cues, and switchable visual themes.
+Een nauwkeurige, installeerbare sporttimer met een smartwatch-interface, offline ondersteuning, sterke alarmsignalen en verschillende thema's.
 
-## Live App Files
+## Functies
 
-- `index.html`: base Sporttimer version
-- `index-cool.html`: enhanced "Cool Edition" with upgraded feedback and themes
+- Deadline-gebaseerde timer die ook na browser- of schermvertraging correct blijft
+- Presets voor twee sporttimers en een rusttimer
+- Oranje/blauwe voortgangsring met glow-grens
+- Acht alarmtonen, 1 tot 10 herhalingen, tempo, toonlengte en volume tot 150%
+- Start-, pauze- en eindsprintfeedback
+- Scherm wakker houden via de Screen Wake Lock API
+- Thema's: Neon Race, Arctic Pulse en Lava Forge
+- Instellingen worden lokaal bewaard
+- Installeerbare PWA met offline ondersteuning
+- Toegankelijke knoppen en instellingendialoog
 
-## Features
+## Lokaal starten
 
-- Circular progress ring with elapsed/remaining color split and glow boundary
-- Preset buttons for `90s`, `60s`, and rest timer
-- Adjustable timer presets and alarm behavior in settings
-- Multiple alarm tones and volume control
-- Smart feedback in Cool Edition:
-  - Start/pause/resume cue sounds
-  - Sprint feedback in final 5 seconds (audio + visual pulse)
-  - Flash pulse on interval transitions
-- Theme switching in Cool Edition:
-  - `Neon Race`
-  - `Arctic Pulse`
-  - `Lava Forge`
-
-## Run Locally
-
-Because this is a static app, you can run it with any local static server.
-
-Example with Python:
-
-```bash
+```powershell
 python -m http.server 4173
 ```
 
-Then open:
+Open daarna `http://localhost:4173/`.
 
-- `http://localhost:4173/index-cool.html`
+## Tests
 
-## Project Structure
-
-```text
-sporttimer/
-  index.html
-  index-cool.html
-  icon sporttimer.png
-  logo-sporttimer-cool.svg
-  sporttimer-cool-v1.png
+```powershell
+npm test
 ```
 
-## Screenshot
+## Bestanden
 
-![Sporttimer Cool Preview](./sporttimer-cool-v1.png)
+- `index.html`: hoofdapp en PWA-startpunt
+- `styles.css`: gedeelde styling
+- `timer-core.js`: testbare tijdsberekeningen
+- `app.js`: timer, audio, instellingen en wake lock
+- `service-worker.js`: offline cache en updates
+- `index-basic.html`: bewaarde oudere basisversie
+- `index-cool.html`: doorverwijzing naar de hoofdapp
 
-## Author
+## Live
 
-Created by Joost Dijkstra.
+[GitHub Pages](https://joost-dijkstra.github.io/Sport-timer/)
+
+## Auteur
+
+Gemaakt door Joost Dijkstra.

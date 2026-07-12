@@ -1,0 +1,8 @@
+{
+  "name": "sporttimer",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/timer-core.test.js"
+  }
+}
